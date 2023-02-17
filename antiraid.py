@@ -2,6 +2,9 @@ import discord
 import requests
 from discord.ext import commands
 from AntiSpam import AntiSpamHandler
+import os
+
+TOKEN = os.getenv('TOKEN')
 
 with open("bannedwords.txt", "r") as file:
     banned_words = file.read().strip().lower().split()
@@ -29,9 +32,6 @@ client.handler = AntiSpamHandler(
     message_duplicate_count=8,
     guild_warn_message=warn_embed_dict,
 )
-
-TOKEN = "ODYxNDQ1MDk0NDY0Njg0MDQy.GEFplO.8LCx8_SCV16TIlEeeW5ko-PqzFrQDy0rufEbD0"
-
 
 @client.event
 async def on_ready():
