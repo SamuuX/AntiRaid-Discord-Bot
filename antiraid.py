@@ -2,6 +2,9 @@ import discord
 import requests
 from discord.ext import commands 
 from AntiSpam import AntiSpamHandler
+from dotenv import load_dotenv
+
+load_dotenv()
 
 with open('bannedwords.txt','r') as file:
     banned_words = file.read().strip().lower().split()
