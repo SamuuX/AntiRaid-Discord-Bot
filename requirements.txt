@@ -1,2 +1,4 @@
 discord.py==2.1.0
-Discord-Anti-Spam=1.6.0
+requests==2.28.2
+Discord-Anti-Spam==1.6.0
+AntiSpam==1.0.0
